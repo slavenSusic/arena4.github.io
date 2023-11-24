@@ -1,0 +1,39 @@
+---
+import servicesDetails from  '../../assets/services-details.jpg'
+import {Image} from 'astro:assets'
+---
+
+<div class="p-5 lg:flex items-start justify-start gap-10 lg:py-20 md:max-w-3xl lg:max-w-7xl md:pt-20 mx-auto">
+    <div class="space-y-5 lg:w-2/3">
+    <Image src={servicesDetails} alt="it" />
+         <h2 class="text-2xl font-bold">Unleashing Innovation for Technological Excellence</h2>
+        <p>Embark on a journey of continuous improvement as we seamlessly integrate groundbreaking technologies into your operations. Our commitment to staying on the leading edge ensures that your experience with us is not just a service but a transformative partnership.</p>
+    
+        <h2 class="text-2xl font-bold">Pioneering the Future of Business</h2>
+        <p>Embracing innovation at its core, we empower you to navigate the ever-evolving landscape of possibilities, making your business a beacon of progress in the competitive market. Our dedication to pushing boundaries ensures that you are not merely keeping up with industry trends but actively shaping them.</p>
+    
+        <p>Join us in revolutionizing your approach to business with our cutting-edge solutions. As your strategic partner, we are committed to propelling your organization into a future where technology and processes converge for unparalleled success.</p>
+    </div>
+
+<div class=" bg-gray-200 p-3 mt-4 lg:mt-0 rounded-md lg:w-1/3">
+    <p class="text-left font-bold text-2xl md:text-xl py-5 border-b-2 border-white"><span class="border-b-2 border-green-500   py-[21px]">Our Se</span>rvices</p>
+    <div>
+        <ul class="p-4 space-y-3">
+            <li>
+              <a href="/services/it" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">IT Solutions</a>
+            </li>
+            <li>
+              <a href="/services/energetics" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">Energetics</a>
+            </li>
+            <li>
+              <a href="/services/ict" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">ICT</a>
+            </li>
+            <li>
+                <a href="/services/isoGdprCisco" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">ISO standards, GDPR compliance and CISO externalization</a>
+            </li>
+            <!-- <li>
+              <a href="#" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">Software Development</a>
+            </li> -->
+          </ul>
+   </div>
+</div>

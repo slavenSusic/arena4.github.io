@@ -1,0 +1,49 @@
+<style>
+    .bg {
+      background-image: url('../../assets/banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+  
+    .bg::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Change height to 100% to cover the entire background */
+      opacity: 0.6;
+      background-color: black;
+      transition: opacity 0.5s ease;
+    }
+  
+    .bg:hover::before {
+      opacity: 0; /* Change opacity to 0 on hover to reveal the background without shadow */
+    }
+  </style>
+  
+  <div class="bg py-10 ">
+    <div class="px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-12 ">
+      <div class="sm:pe-6 lg:pe-8 py-20 ">
+        
+    <div class="absolute top-0 left-0 w-full h-full bg-black/60 "></div>
+
+
+    <div class="flex flex-col justify-center items-center  max-w-3xl mx-auto text-center">
+        <p class="text-green-500 text-left font-bold text-lg md:text-2xl z-20">WANT TO WORK WITH US?</p>
+        <h2 class="font-bold text-3xl md:text-4xl text-white/100 z-20 text-center py-4">Digitally Transform & Grow Your Business</h2>
+        <p class="text-white text-center z-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <div class="flex items-center justify-center gap-3 z-20 pt-10" >
+            <button class="bg-white text-lg px-6 py-2 md:text-xl md:px-8 md:py-3  rounded-md ">Our services <button/>
+                <button class="bg-green-800 text-lg px-6 py-2 rounded-md md:text-xl md:px-8 md:py-3  ">Contact Us <button/>
+        </div>
+    </div>
+    
+      </div>
+      
+  </div>
+  </div>
+  

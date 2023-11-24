@@ -1,0 +1,141 @@
+---
+import { Image } from "astro:assets";
+import trust from "../../assets/trust.jpg";
+---
+
+<div class="pt-20 py-20 px-5 ">
+  <div class="w-full grid grid-cols-1 lg:grid-cols-2 md:gap-x-20">
+ 
+    <div>
+
+
+      <div>
+        <p class="text-green-500 text-left font-bold text-lg md:text-2xl">WHY TRUST US??</p>
+        <h2 class="text-left font-bold text-4xl md:text-4xl leading-[50px]">Rely on Certified Industry Experts for Your Business</h2>
+        <p class="text-lg py-10">Our engineers hold industry-recognized certifications, ensuring a high level of expertise and reliability. 
+          Trust us to drive the digital transformation of your business. With our certified professionals, we bring unparalleled excellence to every aspect of our services.</p>
+    </div>
+
+      <nav class="max-w-7xl mx-auto">
+        <ul class="gap-5 grid grid-cols-1 md:grid-cols-2">
+    <li class="rounded-xl"><a href="" class=" text-lg font-bold">IBM BPM Analyst</a></li>
+    <li class="rounded-xl"><a href="" class="rounded-xl text-lg font-bold">IBM Manager Express</a></li>
+    <li class="rounded-xl"><a href="" class="rounded-xl text-lg font-bold">Oracle Certified Associate</a></li>
+    <li class="rounded-xl"><a href="" class="rounded-xl text-lg font-bold">Oracle Java SE 8</a></li>
+    <li class="rounded-xl"><a href="" class="rounded-md text-lg font-bold">IBM Application Developer</a></li>
+    <li class="rounded-xl"><a href="" class="rounded-md text-lg font-bold">Mulesoft Developer</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="w-full flex justify-center items-center">
+        <Image src={trust} alt="about image" class="w-full" />
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <style>
+      nav ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      nav li {
+        float: none;
+        width: 100%;
+      }
+
+      nav li a {
+        display: block;
+        width: 100%;
+        padding: 15px; 
+        border-left: 3px solid;
+        position: relative;
+        z-index: 2;
+        text-decoration: none;
+        color: #444;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      nav li a:hover {
+        border-bottom: 0px;
+        color: #fff;
+      }
+      nav li:first-child a {
+        border-left: 3px solid #22c55e;
+        border-radius: 6px;
+      }
+      nav li:nth-child(2) a {
+        border-left: 3px solid #22c55e;
+        border-radius: 6px;
+      }
+      nav li:nth-child(3) a {
+        border-left: 3px solid #22c55e;
+        border-radius: 6px;
+      }
+      nav li:nth-child(4) a {
+        border-left: 3px solid #22c55e;
+        border-radius: 6px;
+      }
+      nav li:nth-child(5) a {
+        border-left: 3px solid #22c55e;
+        border-radius: 6px;
+      }
+      nav li:last-child a {
+        border-left: 3px solid #22c55e;
+        border-radius: 6px;
+      }
+
+      nav li a:after {
+        content: "";
+
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0px;
+        position: absolute;
+        transition: all 0.8s ease 0s;
+        -webkit-transition: all 0.8s ease 0s;
+        z-index: -1;
+      }
+
+      nav li a:hover:after {
+        width: 100%;
+      }
+      nav li:first-child a:after {
+        background: #22c55e;
+        border-radius: 3px;
+      }
+      nav li:nth-child(2) a:after {
+        background: #22c55e;
+        border-radius: 3px;
+      }
+      nav li:nth-child(3) a:after {
+        background: #22c55e;
+        border-radius: 3px;
+      }
+      nav li:nth-child(4) a:after {
+        background: #22c55e;
+        border-radius: 3px;
+      }
+      nav li:nth-child(5) a:after {
+        background: #22c55e;
+        border-radius: 3px;
+      }
+      nav li:last-child a:after {
+        background: #22c55e;
+        border-radius: 3px;
+      }
+    </style>
+  </div>
+</div>

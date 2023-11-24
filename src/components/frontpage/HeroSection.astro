@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import hero from '../../assets/home-font.png'
+import bottom from '../../assets/home-bottom-shape.png'
+---
+
+<section class="mr-auto text-3xl font-bold space-y-5 pt-20 bg-gradient-to-b from-green-800 via-green-500 to-green-100  ">
+    <div class="max-w-3xl lg:max-w-7xl mx-auto flex flex-col lg:flex-row space-y-8 items-center lg:px-5">
+        <div class="flex flex-col lg:items-start space-y-10 lg:w-1/2">
+<h1 class="text-center text-4xl md:text-7xl  font-bold text-white  lg:text-left">IT Solutions & Business Services Company </h1>
+<p class="text-base text-center text-white md:text-lg lg:text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+<div class="flex items-center justify-center gap-3" >
+    <button class="bg-white text-lg px-6 py-2 md:text-xl md:px-8 md:py-3  rounded-md ">Our services <button/>
+        <button class="bg-green-800 text-lg px-6 py-2 rounded-md md:text-xl md:px-8 md:py-3  ">Contact Us <button/>
+</div>
+</div>
+<div>
+    <Image src={hero} alt="" class="lg:w-full"/>
+
+</div>
+</div>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#FFFF" fill-opacity="1" d="M0,0L30,32C60,64,120,128,180,165.3C240,203,300,213,360,202.7C420,192,480,160,540,144C600,128,660,128,720,160C780,192,840,256,900,266.7C960,277,1020,235,1080,202.7C1140,171,1200,149,1260,149.3C1320,149,1380,171,1410,181.3L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+  </svg>
+</section>

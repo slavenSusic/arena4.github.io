@@ -1,0 +1,85 @@
+---
+import idea from '../../assets/idea.svg'
+import solar from '../../assets/solar.svg'
+import code from '../../assets/code.svg'
+import idea from '../../assets/idea.svg'
+import iso from '../../assets/iso.svg'
+import gdpr from '../../assets/gdpr.svg'
+import ciso from '../../assets/ciso.svg'
+
+
+
+const services= 
+[
+ 
+  {
+    category: "IT Solution",
+    description: "Embark on a journey of continuous improvement as we seamlessly integrate groundbreaking technologies into your operations.Our commitment to staying on the leading edge ensures that your experience with us",
+    readMoreLink: "Read More",
+    svg: idea.src,
+    link:"services/it"
+  },
+  {
+    category: "ICT infrastructure",
+    description: "At digital arena, we specialize in the construction and maintenance of state-of-the-art ICT infrastructure. Our dedicated team is committed to building and sustaining all types of infrastructure necessary for seamless data services. ",
+    readMoreLink: "Read More",
+    svg: code.src,
+    link:"services/ict"
+   
+  },
+  {
+    category: "Energetics",
+    description: "Digital arena is dedicated to revolutionizing the energy sector through strategic consulting and cutting-edge technology solutions. We focus on optimizing energy consumption and fostering innovation to create a sustainable future",
+    readMoreLink: "Read More",
+    svg: solar.src,
+    link:"services/energetics"
+   
+  },
+  {
+    category: "GDPR",
+    description: "Our commitment extends to GDPR compliance, safeguarding the personal data of all stakeholders in your business.",
+    readMoreLink: "Read More",
+    svg: gdpr.src,
+    link:"services/isoGdprCisco"
+  
+  },
+  {
+    category: "CISO",
+    description: "Digital arena offers CISO outsourcing services to strengthen your cybersecurity posture.Our comprehensive approach includes..",
+    readMoreLink: "Read More",
+    svg: ciso.src,
+    link:"services/isoGdprCisco"
+ 
+  },
+  {
+    category: "ISO",
+    description: "At digital arena, we specialize in providing comprehensive information system audit services",
+    readMoreLink: "Read More",
+    svg: iso.src,
+    link:"services/isoGdprCisco"
+ 
+  }
+]
+
+---
+
+
+<div class="bg-white pt-20">
+    <p class="text-green-500 text-center font-bold text-lg md:text-2xl">What we provide</p>
+    <h2 class="text-center font-bold text-3xl md:text-4xl">Our Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-3 py-10 gap-y-10 max-w-7xl mx-auto px-5 xl:px-0" >
+{services.map((service)=> {
+    return (
+       
+        <div class="shadow-xl maw-w-sm mx-auto p-5 group space-y-10 hover:-translate-y-2 duration-300">
+        <img src={service.svg} class="w-1/6 group-hover:transform group-hover:scale-x-[-1] transition duration-500"/>
+        <h4 class="text-2xl font-bold">{service.category}</h4>
+       <p class="text-lg ">{service.description}</p>
+        <p class="text-green-500 font-bold flex gap-5 items-center"><span class="hover:translate-x-2 duration-300 text-2xl font-bold">&rarr;</span><a href={service.link} >Read More</a></p>
+    </div> 
+        
+    )
+
+})}
+</div> 

@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import choose from '../../assets/choose.jpg'
+---
+<div class="pt-20  py-20 px-5 ">
+
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 md:gap-x-20 ">
+
+        <div class="w-full flex justify-center items-center">
+            <Image src={choose} alt="about image w-full"  />
+        </div>
+    
+        <div>
+          <div>
+            <p class="text-green-500 text-left font-bold text-lg md:text-2xl">WHY CHOOSE US?</p>
+            <h2 class="text-left font-bold text-4xl  md:text-4xl leading-[50px]">Embrace the Future: Propel Your Brand with the Latest in Technology</h2>
+            <p class="text-xl">Stay at the forefront of innovation by choosing us to elevate your brand.</p>
+        </div>
+    
+                    <nav class="max-w-7xl mx-auto pt-5 duration-500">
+                        <ul class="gap-5 grid grid-cols-1 md:grid-cols-2 ">
+                          <li class="roundex-xl bg-white"><a href="roundex-xl text-lg font-bold" class="text-lg font-bold">Angular</a></li>
+                          <li class="roundex-xl"><a href="" class="roundex-xl text-lg font-bold">MySql</a></li>
+                          <li class="roundex-xl"><a href="" class="roundex-xl text-lg font-bold">Python</a></li>
+                          <li class="roundex-xl"><a href="" class="roundex-xl text-lg font-bold">Amazon Web Services</a></li>
+                          <li class="roundex-xl"><a href="" class="roundex-xl text-lg font-bold">Vue</a></li>
+                          <li class="roundex-xl"><a href="" class="roundex-xl text-lg font-bold">PostgreSQL</a></li>
+                          
+                        </ul>
+                      </nav>
+                     
+                    <style>
+
+
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav li{
+  float: none; 
+  width: 100%;
+}
+
+nav li a{
+  
+  display: block; 
+  width: 100%; 
+  padding: 15px; 
+  border-left: 3px solid; 
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  color: #444;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+}
+  
+nav li a:hover{ border-bottom: 0px; color: #fff;}
+nav li:first-child a{ border-left: 3px solid #22C55E ; border-radius:6px }
+nav li:nth-child(2) a{ border-left: 3px solid #22C55E; border-radius:6px }
+nav li:nth-child(3) a{ border-left: 3px solid #22C55E; border-radius:6px }
+nav li:nth-child(4) a{ border-left: 3px solid #22C55E; border-radius:6px }
+nav li:nth-child(5) a{ border-left: 3px solid #22C55E; border-radius:6px }
+nav li:last-child a{ border-left: 3px solid #22C55E; border-radius:6px }
+
+nav li a:after { 
+  content: "";
+
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 10.5s ease 0s; 
+  -webkit-transition: all 0.8s ease 0s; 
+  z-index: -1;
+}
+
+nav li a:hover:after{ width: 100%; }
+nav li:first-child a:after{ background: #22C55E; border-radius:3px }
+nav li:nth-child(2) a:after{ background: #22C55E;border-radius:3px }
+nav li:nth-child(3) a:after{ background: #22C55E;border-radius:3px }
+nav li:nth-child(4) a:after{ background: #22C55E;border-radius:3px }
+nav li:nth-child(5) a:after{ background: #22C55E; border-radius:3px}
+nav li:last-child a:after{ background: #22C55E; border-radius:3px}
+
+                    </style>
+</style>

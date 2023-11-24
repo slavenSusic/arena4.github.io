@@ -1,0 +1,64 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { fade } from 'astro:transitions';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PortfolioHeader from '../components/portfolio/PortfolioHeader.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+        <ViewTransitions />
+		<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+    <body class="">
+        <main transition:animate="initial" />
+            <div class="z-0">
+               <Header />      
+            </div> 
+            <div class="-z-20">
+               <PortfolioHeader />
+            </div> 
+         
+    
+          <slot />
+        </main>
+        <Footer/>
+      </body>
+</html>
+<style is:global>
+	:root {
+		
+	}
+	html {
+		font-family: 'Dosis', sans-serif;
+	
+	}
+	code {
+		font-family:
+		Dosis,
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>

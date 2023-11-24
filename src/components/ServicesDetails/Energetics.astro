@@ -1,0 +1,41 @@
+---
+import servicesDetails from  '../../assets/energy-detail.jpg'
+import {Image} from 'astro:assets'
+---
+
+<div class="p-5 lg:flex items-start justify-start gap-10 lg:py-20 md:max-w-3xl lg:max-w-7xl md:pt-20 mx-auto">
+    <div class="space-y-5 lg:w-2/3">
+    <Image src={servicesDetails} alt="it" />
+    <h2 class="text-2xl font-bold">Transforming the Energy Sector with Efficient Energy Use</h2>
+    <p>Digital arena is dedicated to revolutionizing the energy sector through strategic consulting and cutting-edge technology solutions. We focus on optimizing energy consumption and fostering innovation to create a sustainable future.</p>
+  
+    <h2 class="text-2xl font-bold">Our Commitment to Sustainable Energy Solutions</h2>
+    <p>At Green, we provide our clients with the best software and IT solutions tailored for the energy industry. Our services are designed to enhance operational efficiency, reduce environmental impact, and drive positive change in the way energy is produced and consumed.</p>
+  
+    <p>With a passion for sustainable practices, Green strives to deliver top-notch software development consulting to address the unique challenges and opportunities in the energy sector. We leverage technology to propel our clients towards a greener and more sustainable future.</p>
+  
+    <p>Join us in our mission to transform the energy landscape. Together, let's innovate, optimize, and create a more sustainable world for future generations.</p>
+   </div>
+
+<div class=" bg-gray-200 p-3 mt-4 lg:mt-0 rounded-md lg:w-1/3">
+    <p class="text-left font-bold text-2xl md:text-xl py-5 border-b-2 border-white"><span class="border-b-2 border-green-500   py-[21px]">Our Se</span>rvices</p>
+    <div>
+        <ul class="p-4 space-y-3">
+            <li>
+              <a href="/services/it" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">IT Solutions</a>
+            </li>
+            <li>
+              <a href="/services/energetics" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">Energetics</a>
+            </li>
+            <li>
+              <a href="/services/ict" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">ICT</a>
+            </li>
+            <li>
+              <a href="/services/isoGdprCisco" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">ISO standards, GDPR compliance and CISO externalization</a>
+            </li>
+            <!-- <li>
+              <a href="#" class="text-white bg-green-500 py-3 rounded-lg p-5 hover:bg-green-600 block">Software Development</a>
+            </li> -->
+          </ul>
+   </div>
+</div>

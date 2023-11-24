@@ -1,0 +1,25 @@
+---
+import {Image} from 'astro:assets'
+import AboutLayout from '../layouts/AboutLayout.astro';
+import laptop from '../assets/laptop.jpg'
+import AboutHeader from '../components/about/AboutHeader.astro'
+import FrontAbout from '../components/frontpage/FrontAbout.astro'
+import WhyChooseUS from '../components/frontpage/WhyChooseUS.astro'
+import WorkWithUs from '../components/frontpage/WorkWithUs.astro';
+import AboutCards from '../components/about/AboutCards.astro'
+import WorkProces from '../components/about/WorkProces.astro'
+import NumbersBanner from '../components/frontpage/NumbersBanner.astro';
+import Leadership from '../components/frontpage/Leadership.astro';
+import Partners from '../components/frontpage/Partners.astro';
+
+---
+<AboutLayout>
+    <AboutCards/>
+    <FrontAbout/>
+    <NumbersBanner/>
+    <Leadership/>
+    <WorkProces/>
+	<WorkWithUs />
+    <Partners/>
+	
+</AboutLayout>
