@@ -7,7 +7,7 @@ import solar from '../assets/solar.jpg'
 import Layout from '../layouts/ProjectLayout.astro'
 import kaulfland from '../assets/kaufland-m.jpg'
 import {Image} from 'astro:assets'
-export async function getStaticPaths() {
+
   const pages = [
     {
       slug: undefined,
@@ -22,25 +22,18 @@ export async function getStaticPaths() {
     },
     {
       slug: "portfolio/kaufland-marke(t)",
-      title: "kaufland-marke(t)",
-      headline: "Interaktivna aplikacija u kojoj kupci osvajaju vrijedne nagrade",
-      text1:"Uzbudljiva interaktivna aplikacija, stvorena s ljubavlju od strane tvrtke Digital Arena za našeg dragocjenog partnera, Kaufland, pruža kupcima nevjerojatno iskustvo osvajanja vrijednih nagrada. Ova inovativna platforma ne samo da olakšava kupovinu već i nudi stimulativan način za korisnike da uživaju u interakciji s brendom. S radošću vodimo kupce kroz putovanje nagradama, potičući njihovu vjernost i pružajući im jedinstveno iskustvo kupovine u suradnji s Kauflandom.",
-      // subheadline:"Inavativnost i zelena energija",
-      // text2:"Razvijamo inovativnu aplikaciju koja će riješiti izazove vezane uz projektiranje fotoelektričnih sustava. Naš cilj je pružiti korisnicima alat koji će uzeti u obzir cijene električne energije, vremensku diferencijaciju tarifa te zakonske okvire pojedinih zemalja u regiji. Osim toga, implementirat ćemo umjetnu inteligenciju koja će pretraživati proizvode, davati preporuke i optimizirati odgovore kako bismo generirali dizajn u pitanju minuta, umjesto tjednima.",
+      title: "pvsmartclick",
+      headline: "Interaktivna aplikacija u kojoj kupci",
+      text1:"Softverska platforma pruža sveobuhvatno rješenje za sve faze razvoja solarnih elektrana. Uključuje alate za dizajn koji omogućuju precizno planiranje i vizualizaciju, pratnju proizvodnje energije te sustave održavanja. Osim toga, softver pruža mogućnost selekcije opreme koja je ključna za optimalno funkcioniranje solarnih elektrana. . Integrirajući ove ključne aspekte, naša platforma olakšava upravljanje, poboljšava učinkovitost i osigurava dugoročnu pouzdanost solarnih energetskih sustava",
+      subheadline:"Inavativnost i zelena energija",
+      text2:"Razvijamo inovativnu aplikaciju koja će riješiti izazove vezane uz projektiranje fotoelektričnih sustava. Naš cilj je pružiti korisnicima alat koji će uzeti u obzir cijene električne energije, vremensku diferencijaciju tarifa te zakonske okvire pojedinih zemalja u regiji. Osim toga, implementirat ćemo umjetnu inteligenciju koja će pretraživati proizvode, davati preporuke i optimizirati odgovore kako bismo generirali dizajn u pitanju minuta, umjesto tjednima.",
       
       text3:"Ova aplikacija će riješiti neizvjesnost investitora prilikom ulaganja u obnovljive izvore energije, optimizirati male elektrane prema potrošnji i lokalnom distributeru energije te pružiti točnu dokumentaciju s minimalnim unosima korisnika. Također, potičemo postojeće potrošače električne energije da investiraju u fotonaponske elektrane za vlastite potrebe, koristeći umjetnu inteligenciju za pomoć pri odabiru opreme prema dostupnosti, cjenovnom rasponu i lokaciji. Kroz praćenje proizvodnje i potrošnje, aplikacija će pružati analize i uvide potrebne za efikasno korištenje obnovljivih izvora energije.",
       picture:kaulfland,
       category:"Retail, App",
       link: 'https://demo.kaufland.digitalarena.hr/',
     },
-
-
-
-
-
-
-
-    {
+     {
       slug: "portfolio/pv-smart-click",
       title: "pvsmartclick",
       headline: "Simulacija troškova i učinkovitosti solarnih elektrana",
@@ -54,16 +47,14 @@ export async function getStaticPaths() {
       link: 'https://pvsmartclick.com/home',
     },
   ];
-  return pages.map(({ slug, title, headline, picture,text1,subheadline,text2,text3,category,link }) => {
-    return {
-      params: { slug },
-      props: { title, headline,picture,text1,subheadline,text2,text3,category,link },
-    };
-  });
-}
+const { slug } = Astro.params;
+const page = pages.find((page) => page.slug === slug);
+if (!page) return Astro.redirect("/404");
 
-const { title, headline,picture,text1,subheadline,text2,text3,category,link } = Astro.props;
+const { title, headline,picture,text1,subheadline,text2,text3,category,link } = page;
 ---
+
+
 <Layout>
 <div class="p-8 space-y-5 max-w-7xl mx-auto">
   <div>
