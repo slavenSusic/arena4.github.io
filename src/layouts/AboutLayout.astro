@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Navbar from '../components/Navbar.jsx';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AboutHeader from '../components/about/AboutHeader.astro'
@@ -29,7 +30,7 @@ import AboutHeader from '../components/about/AboutHeader.astro'
     <body class="">
 		<main transition:animate="initial" />
             <div class="z-0">
-               <Header />      
+               <Navbar client:load />      
             </div> 
             <div class="-z-20">
                <AboutHeader />
