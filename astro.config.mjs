@@ -10,6 +10,6 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   // output: "server",
   // adapter: vercelServerless(),
-  site: 'https://slavenSusic.github.io',
+  site: 'https://slavensusic.github.io',
  
 });
