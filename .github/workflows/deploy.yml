@@ -1,4 +1,4 @@
-name: Deploy Astro to GitHub Pages
+ name: Github Pages Astro CI
 
     on:
      # Trigger the workflow every time you push to the `main` branch
@@ -6,7 +6,7 @@ name: Deploy Astro to GitHub Pages
         branches: [ main ]
       # Allows you to run this workflow manually from the Actions tab on GitHub.
       workflow_dispatch:
-
+      
       # Allow this job to clone the repo and create a page deployment
     permissions:
       contents: read
