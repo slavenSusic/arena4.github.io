@@ -1,12 +1,12 @@
 ---
-import about from '../../assets/about.jpg'
+import about from '../../assets/about-ilustration.svg'
 import { Image } from 'astro:assets';
 
 ---
 
 <div class="bg-gray-200 pt-20  py-20 px-5">
 
-<div class="w-full grid grid-cols-1 lg:grid-cols-2 md:gap-x-20  bg-gray-200">
+<div class="w-full grid grid-cols-1 lg:grid-cols-2 md:gap-x-20 justify-items-center bg-gray-200">
 
     <div>
 
@@ -17,7 +17,7 @@ import { Image } from 'astro:assets';
                     <p class="text-xl">At digital arena, we are driven by a passion to deliver top-notch IT services for your business</p>
                 </div>
 
-            <div class="one flex flex-col space-y-2 bg-gray-200 pb-[50px] pt-10 w-full" >
+            <div class="one flex flex-col  space-y-2 bg-gray-200 pb-[50px] pt-10 w-full" >
            <div class="flex justify-between w-full"> <p class="font-bold">IT</p>  <p>90%</p> </div>
              <div class="progress-value "></div>
              <div class="flex justify-between w-full"> <p class="font-bold">Energetics</p>  <p>95%</p> </div>
@@ -29,8 +29,8 @@ import { Image } from 'astro:assets';
             </div>
           </div>
             </div>
-                <div class="w-full flex">
-                    <img src={about.src} alt="about image"  />
+                <div class="w-1/2 flex">
+                    <img src={about.src} alt="about image" class="w-full" />
                 </div>
 
 </div>

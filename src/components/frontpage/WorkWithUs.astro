@@ -1,3 +1,7 @@
+---
+import Contact from '../Contact.astro'
+---
+
 <style>
     .bg {
       background-image: url('../../assets/banner.jpg');
@@ -37,8 +41,8 @@
         <h2 class="font-bold text-3xl md:text-4xl text-white/100 z-20 text-center py-4">Digitally Transform & Grow Your Business</h2>
         <p class="text-white text-center z-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         <div class="flex items-center justify-center gap-3 z-20 pt-10" >
-            <button class="bg-white text-lg px-6 py-2 md:text-xl md:px-8 md:py-3  rounded-md ">Our services <button/>
-                <button class="bg-green-800 text-lg px-6 py-2 rounded-md md:text-xl md:px-8 md:py-3  ">Contact Us <button/>
+            <button class="bg-white text-lg px-6 py-2 md:text-xl md:px-8 md:py-3  rounded-md "><a href="/services"> Our services </a> <button/>
+              <Contact/>
         </div>
     </div>
     
