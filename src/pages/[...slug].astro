@@ -1,83 +1,38 @@
-<!-- ---
-import Header from '../components/Header.astro'
-import { ViewTransitions } from 'astro:transitions';
-import PortfolioDetailHeader from '../components/portfolio/PortfolioDetailHeader.astro'
-import Footer from '../components/Footer.astro'
-import solar from '../assets/solar.jpg'
-import Layout from '../layouts/ProjectLayout.astro'
-import kaulfland from '../assets/kaufland-m.jpg'
-import {Image} from 'astro:assets'
-
+---
+export async function getStaticPaths() {
   const pages = [
     {
       slug: undefined,
       title: "Astro Store",
-      headline: "Welcome to the Astro store!",
+      text: "Welcome to the Astro store!",
     },
     {
-      slug: "projects",
+      slug: "products",
       title: "Astro products",
-      headline: "We have lots of products for you",
-     
+      text: "We have lots of products for you",
     },
     {
-      slug: "portfolio/kaufland-marke(t)",
-      title: "pvsmartclick",
-      headline: "Interaktivna aplikacija u kojoj kupci osvajaju  nagrade",
-      text1:"Prvih 1000 korisnika koji imaju najbolje rezultate na rang- listi u svoj pretinac dobivaju kod kojim ostvaruju pravo na dnevnu nagradu – jedan proizvod Kauflandove robne marke",
-      // text2:"Razvijamo inovativnu aplikaciju koja će riješiti izazove vezane uz projektiranje fotoelektričnih sustava. Naš cilj je pružiti korisnicima alat koji će uzeti u obzir cijene električne energije, vremensku diferencijaciju tarifa te zakonske okvire pojedinih zemalja u regiji. Osim toga, implementirat ćemo umjetnu inteligenciju koja će pretraživati proizvode, davati preporuke i optimizirati odgovore kako bismo generirali dizajn u pitanju minuta, umjesto tjednima.",
-      
-      // text3:"Ova aplikacija će riješiti neizvjesnost investitora prilikom ulaganja u obnovljive izvore energije, optimizirati male elektrane prema potrošnji i lokalnom distributeru energije te pružiti točnu dokumentaciju s minimalnim unosima korisnika. Također, potičemo postojeće potrošače električne energije da investiraju u fotonaponske elektrane za vlastite potrebe, koristeći umjetnu inteligenciju za pomoć pri odabiru opreme prema dostupnosti, cjenovnom rasponu i lokaciji. Kroz praćenje proizvodnje i potrošnje, aplikacija će pružati analize i uvide potrebne za efikasno korištenje obnovljivih izvora energije.",
-      picture:kaulfland,
-      category:"Retail, App",
-      link: 'https://demo.kaufland.digitalarena.hr/',
-    },
-     {
-      slug: "portfolio/pv-smart-click",
-      title: "pvsmartclick",
-      headline: "Simulacija troškova i učinkovitosti solarnih elektrana",
-      text1:"Softverska platforma pruža sveobuhvatno rješenje za sve faze razvoja solarnih elektrana. Uključuje alate za dizajn koji omogućuju precizno planiranje i vizualizaciju, pratnju proizvodnje energije te sustave održavanja. Osim toga, softver pruža mogućnost selekcije opreme koja je ključna za optimalno funkcioniranje solarnih elektrana. . Integrirajući ove ključne aspekte, naša platforma olakšava upravljanje, poboljšava učinkovitost i osigurava dugoročnu pouzdanost solarnih energetskih sustava",
-      subheadline:"Inavativnost i zelena energija",
-      text2:"Razvijamo inovativnu aplikaciju koja će riješiti izazove vezane uz projektiranje fotoelektričnih sustava. Naš cilj je pružiti korisnicima alat koji će uzeti u obzir cijene električne energije, vremensku diferencijaciju tarifa te zakonske okvire pojedinih zemalja u regiji. Osim toga, implementirat ćemo umjetnu inteligenciju koja će pretraživati proizvode, davati preporuke i optimizirati odgovore kako bismo generirali dizajn u pitanju minuta, umjesto tjednima.",
-      
-      text3:"Ova aplikacija će riješiti neizvjesnost investitora prilikom ulaganja u obnovljive izvore energije, optimizirati male elektrane prema potrošnji i lokalnom distributeru energije te pružiti točnu dokumentaciju s minimalnim unosima korisnika. Također, potičemo postojeće potrošače električne energije da investiraju u fotonaponske elektrane za vlastite potrebe, koristeći umjetnu inteligenciju za pomoć pri odabiru opreme prema dostupnosti, cjenovnom rasponu i lokaciji. Kroz praćenje proizvodnje i potrošnje, aplikacija će pružati analize i uvide potrebne za efikasno korištenje obnovljivih izvora energije.",
-      picture:solar,
-      category:"Enrgetics, App",
-      link: 'https://pvsmartclick.com/home',
+      slug: "products/astro-handbook",
+      title: "The ultimate Astro handbook",
+      text: "If you want to learn Astro, you must read this book.",
     },
   ];
-const { slug } = Astro.params;
-const page = pages.find((page) => page.slug === slug);
-if (!page) return Astro.redirect("/404");
+  return pages.map(({ slug, title, text }) => {
+    return {
+      params: { slug },
+      props: { title, text },
+    };
+  });
+}
 
-const { title, headline,picture,text1,subheadline,text2,text3,category,link } = page;
+const { title, text } = Astro.props;
 ---
-
-
-<Layout>
-<div class="p-8 space-y-5 max-w-7xl mx-auto">
-  <div>
-    <img src={picture.src} alt="pannel" class="rounded-lg w-full max-h-1/3"/>
-  </div>
-<h1 class=" text-2xl font-bold">{headline}</h1>
-<p>{text1}</p>
-<h1 class=" text-2xl font-bold">{subheadline}</h2>
-  <p>{text2}</p>
-  <p>{text3}</p>
-  <div class="flex gap-10 flex-col justify-center md:flex-row items-center md:justify-between">
-    <div>
-    <h3 class="font-bold text-2xl">Caterogy:</h3><span class="">{category}</span>
-    </div>
-    <div>
-    <h3 class="font-bold text-2xl">Works Preview</h3>
-    <a   href={link}> <button class="bg-green-500 text-white font-bold text-lg px-6 py-2 md:text-xl md:px-8 md:py-3 rounded-md">Live project
-     
-    </button></a>
-  </div>
-  </div>
-<div>
-
-  </main>
- 
-</body>
-</Layout> -->
+<html>
+  <head>
+    <title>{title}</title>
+  </head>
+  <body>
+    <h1>{title}</h1>
+    <p>{text}</p>
+  </body>
+</html>
