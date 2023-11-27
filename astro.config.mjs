@@ -11,5 +11,5 @@ export default defineConfig({
   output: "server",
   adapter: vercelServerless(),
   site: 'https://slavenSusic.github.io',
-  base: '/arena4',
+ 
 });
